@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MysticSpace — Ғарыш әлемі</title>
+    <meta name="description"
+          content="MysticSpace — планеталар мен ғарыш туралы интерактивті веб-сайт.">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <a href="index.html" class="logo">✦ MysticSpace</a>
-
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logo">
+        🌌 MysticSpace
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
     <nav id="nav">
         <a href="#home">Басты бет</a>
         <a href="#about">Біз туралы</a>
@@ -21,398 +24,440 @@
         <a href="#catalog">Планеталар</a>
         <a href="#contact">Байланыс</a>
     </nav>
-
-    <button class="theme-btn" onclick="toggleTheme()">☾</button>
+    <button class="theme-btn" onclick="toggleTheme()">
+        ☀️
+    </button>
 </header>
-
-
-<!-- HOME -->
+<!-- ================= HOME ================= -->
 <section id="home" class="hero">
-
-    <div class="hero-text">
-
-        <span class="small-title">🌌 MYSTICSPACE</span>
-
+    <div class="hero-content">
+        <p class="hero-small">
+            ҒАРЫШТЫҢ ЖҰМБАҚ ӘЛЕМІНЕ ҚОШ КЕЛДІҢІЗ
+        </p>
         <h1>
-            Ғарыш
-            <br>
-            <b>сіз ойлағаннан да жақын.</b>
+            Ғаламның құпияларын<br>
+            бірге зерттейік
         </h1>
-
         <p>
-            Планеталар, жұлдыздар және ғарыш әлемі туралы
-            қызықты әрі қысқа ақпаратты бір жерден зерттеңіз.
+            MysticSpace — Күн жүйесіндегі планеталар туралы
+            қызықты ақпарат беретін заманауи интерактивті жоба.
         </p>
-
-        <a href="#catalog" class="btn">
-            Ғарышты зерттеу →
+        <a href="#catalog" class="main-btn">
+            🚀 Планеталарды зерттеу
         </a>
-
     </div>
-
-    <div class="planet-animation">
-        🪐
-    </div>
-
 </section>
-
-
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 <section id="about" class="section">
-
     <div class="section-title">
-        <span>БІЗ ТУРАЛЫ</span>
-        <h2>MysticSpace деген не?</h2>
-    </div>
-
-    <div class="about-box">
-
-        <div>
-            <h3>🚀 Біздің мақсатымыз</h3>
-
-            <p>
-                MysticSpace — ғарыш туралы ақпаратты
-                қарапайым және қызықты түрде ұсынатын
-                оқу жобасы.
-            </p>
-
-            <p>
-                Мұнда қолданушы планеталарды қарап,
-                іздеу арқылы қажетті нысанды тауып,
-                әр планета туралы толық ақпаратқа өте алады.
-            </p>
-        </div>
-
-        <div class="about-icon">
-            🌌
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SERVICES -->
-<section id="services" class="section">
-
-    <div class="section-title">
-        <span>МҮМКІНДІКТЕР</span>
-        <h2>Нені зерттей аласың?</h2>
-    </div>
-
-    <div class="grid four">
-
-        <article class="service-card">
-            <div class="icon">🪐</div>
-            <h3>Планеталар</h3>
-            <p>
-                Күн жүйесіндегі планеталар
-                туралы ақпарат.
-            </p>
-        </article>
-
-        <article class="service-card">
-            <div class="icon">⭐</div>
-            <h3>Жұлдыздар</h3>
-            <p>
-                Жұлдыздардың ерекшеліктері
-                мен ғарыштағы орны.
-            </p>
-        </article>
-
-        <article class="service-card">
-            <div class="icon">🌌</div>
-            <h3>Галактикалар</h3>
-            <p>
-                Әлемдегі алып галактикалар
-                туралы мәлімет.
-            </p>
-        </article>
-
-        <article class="service-card">
-            <div class="icon">🚀</div>
-            <h3>Ғарыш миссиялары</h3>
-            <p>
-                Ғарышты зерттейтін
-                миссиялар туралы.
-            </p>
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- CATALOG -->
-<section id="catalog" class="section catalog-section">
-
-    <div class="section-title">
-        <span>КАТАЛОГ</span>
-        <h2>Күн жүйесінің планеталары</h2>
+        <span>01</span>
+        <h2>Біз туралы</h2>
         <p>
-            Қалаған планетаңды іздеп көр.
+            MysticSpace — ғарыш әлемін қарапайым әрі қызықты
+            түрде зерттеуге арналған веб-жоба.
         </p>
     </div>
-
+    <div class="about-grid">
+        <div class="about-card">
+            <div class="about-icon">🌌</div>
+            <h3>Ғарыш әлемі</h3>
+            <p>
+                Күн жүйесі, планеталар және олардың
+                ерекшеліктері туралы ақпарат.
+            </p>
+        </div>
+        <div class="about-card">
+            <div class="about-icon">🔭</div>
+            <h3>Зерттеу</h3>
+            <p>
+                Планеталарды зерттеп, олардың қызықты
+                қасиеттері туралы жаңа мәлімет біліңіз.
+            </p>
+        </div>
+        <div class="about-card">
+            <div class="about-icon">✨</div>
+            <h3>Қызықты ақпарат</h3>
+            <p>
+                Әр планетаға арналған қысқаша әрі
+                түсінікті фактілер жинағы.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section services-section">
+    <div class="section-title">
+        <span>02</span>
+        <h2>Біздің мүмкіндіктер</h2>
+        <p>
+            MysticSpace сайтында ғарышты зерттеуге
+            арналған бірнеше мүмкіндік бар.
+        </p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-number">01</div>
+            <div class="service-icon">🪐</div>
+            <h3>Планеталарды зерттеу</h3>
+            <p>
+                Күн жүйесіндегі планеталар туралы
+                негізгі ақпаратпен танысыңыз.
+            </p>
+        </div>
+        <div class="service-card">
+            <div class="service-number">02</div>
+            <div class="service-icon">🔍</div>
+            <h3>Іздеу жүйесі</h3>
+            <p>
+                Қажетті планетаны атауы арқылы
+                жылдам тауып алыңыз.
+            </p>
+        </div>
+        <div class="service-card">
+            <div class="service-number">03</div>
+            <div class="service-icon">📚</div>
+            <h3>Қызықты фактілер</h3>
+            <p>
+                Әр планетаның маңызды және
+                қызықты ерекшеліктерін оқыңыз.
+            </p>
+        </div>
+        <div class="service-card">
+            <div class="service-number">04</div>
+            <div class="service-icon">🌠</div>
+            <h3>Интерактивті тәжірибе</h3>
+            <p>
+                Заманауи дизайн және интерактивті
+                элементтер арқылы сайтты зерттеңіз.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- ================= PLANETS ================= -->
+<section id="catalog" class="section catalog-section">
+    <div class="section-title">
+        <span>03</span>
+        <h2>Планеталар каталогы</h2>
+        <p>
+            Планетаны таңдап, ол туралы толық ақпаратты қараңыз.
+        </p>
+    </div>
+    <!-- SEARCH -->
     <div class="search-box">
-        🔎
         <input
             type="text"
             id="search"
-            placeholder="Планетаны іздеу..."
+            placeholder="🔍 Планетаны іздеу..."
             oninput="searchPlanets()"
         >
     </div>
-
-
-    <div id="cards" class="grid three">
-
-        <!-- MERCURY -->
+    <!-- PLANET CARDS -->
+    <div class="planet-grid">
+        <!-- МЕРКУРИЙ -->
         <article class="planet-card" data-name="меркурий">
-
             <div class="planet-image mercury">
-                C:\Users\Пользователь\Downloads\Mercury_in_color_-_Prockter07_centered.jpg
+                <img
+                    src="images/mercury.jpg"
+                    alt="Меркурий"
+                >
             </div>
-
-            <span class="tag">ПЛАНЕТА</span>
-
-            <h3>Меркурий</h3>
-
-            <p>
-                Күнге ең жақын орналасқан
-                планета.
-            </p>
-
-            <a href="product.html?id=1">
-                Толық ақпарат →
-            </a>
-
+            <div class="planet-content">
+                <span class="planet-number">01</span>
+                <h3>Меркурий</h3>
+                <p>
+                    Күнге ең жақын және Күн жүйесіндегі
+                    ең кішкентай планета.
+                </p>
+                <a
+                    href="product.html?id=1"
+                    class="card-btn"
+                >
+                    Толық ақпарат →
+                </a>
+            </div>
         </article>
-
-
-        <!-- VENUS -->
+        <!-- ВЕНЕРА -->
         <article class="planet-card" data-name="венера">
-
             <div class="planet-image venus">
-                ♀
+                <img
+                    src="images/venus.jpg"
+                    alt="Венера"
+                >
             </div>
-
-            <span class="tag">ПЛАНЕТА</span>
-
-            <h3>Венера</h3>
-
-            <p>
-                Тығыз атмосферасы бар
-                өте ыстық планета.
-            </p>
-
-            <a href="product.html?id=2">
-                Толық ақпарат →
-            </a>
-
+            <div class="planet-content">
+                <span class="planet-number">02</span>
+                <h3>Венера</h3>
+                <p>
+                    Жерге көлемі жағынан ұқсас,
+                    бірақ өте ыстық планета.
+                </p>
+                <a
+                    href="product.html?id=2"
+                    class="card-btn"
+                >
+                    Толық ақпарат →
+                </a>
+            </div>
         </article>
-
-
-        <!-- EARTH -->
+        <!-- ЖЕР -->
         <article class="planet-card" data-name="жер">
-
             <div class="planet-image earth">
-                🌍
+                <img
+                    src="images/earth.jpg"
+                    alt="Жер"
+                >
             </div>
-
-            <span class="tag">ПЛАНЕТА</span>
-
-            <h3>Жер</h3>
-
-            <p>
-                Біз өмір сүретін ғаламшар.
-            </p>
-
-            <a href="product.html?id=3">
-                Толық ақпарат →
-            </a>
-
+            <div class="planet-content">
+                <span class="planet-number">03</span>
+                <h3>Жер</h3>
+                <p>
+                    Адамдар мен көптеген тіршілік иелері
+                    өмір сүретін планета.
+                </p>
+                <a
+                    href="product.html?id=3"
+                    class="card-btn"
+                >
+                    Толық ақпарат →
+                </a>
+            </div>
         </article>
-
-
-        <!-- MARS -->
+        <!-- МАРС -->
         <article class="planet-card" data-name="марс">
-
             <div class="planet-image mars">
-                ♂
+                <img
+                    src="images/mars.jpg"
+                    alt="Марс"
+                >
             </div>
-
-            <span class="tag">ПЛАНЕТА</span>
-
-            <h3>Марс</h3>
-
-            <p>
-                Қызыл планета ретінде
-                танымал.
-            </p>
-
-            <a href="product.html?id=4">
-                Толық ақпарат →
-            </a>
-
+            <div class="planet-content">
+                <span class="planet-number">04</span>
+                <h3>Марс</h3>
+                <p>
+                    Қызыл түсімен ерекшеленетін
+                    тасты планета.
+                </p>
+                <a
+                    href="product.html?id=4"
+                    class="card-btn"
+                >
+                    Толық ақпарат →
+                </a>
+            </div>
         </article>
-
-
-        <!-- JUPITER -->
+        <!-- ЮПИТЕР -->
         <article class="planet-card" data-name="юпитер">
-
             <div class="planet-image jupiter">
-                ♃
+                <img
+                    src="images/jupiter.jpg"
+                    alt="Юпитер"
+                >
             </div>
-
-            <span class="tag">ГАЗ АЛЫБЫ</span>
-
-            <h3>Юпитер</h3>
-
-            <p>
-                Күн жүйесіндегі ең үлкен
-                планета.
-            </p>
-
-            <a href="product.html?id=5">
-                Толық ақпарат →
-            </a>
-
+            <div class="planet-content">
+                <span class="planet-number">05</span>
+                <h3>Юпитер</h3>
+                <p>
+                    Күн жүйесіндегі ең үлкен
+                    газ алыбы.
+                </p>
+                <a
+                    href="product.html?id=5"
+                    class="card-btn"
+                >
+                    Толық ақпарат →
+                </a>
+            </div>
         </article>
-
-
-        <!-- SATURN -->
+        <!-- САТУРН -->
         <article class="planet-card" data-name="сатурн">
-
             <div class="planet-image saturn">
-                🪐
+                <img
+                    src="images/saturn.jpg"
+                    alt="Сатурн"
+                >
             </div>
-
-            <span class="tag">ГАЗ АЛЫБЫ</span>
-
-            <h3>Сатурн</h3>
-
-            <p>
-                Әдемі сақиналарымен
-                танымал планета.
-            </p>
-
-            <a href="product.html?id=6">
-                Толық ақпарат →
-            </a>
-
+            <div class="planet-content">
+                <span class="planet-number">06</span>
+                <h3>Сатурн</h3>
+                <p>
+                    Үлкен әрі ерекше сақиналарымен
+                    танымал газ алыбы.
+                </p>
+                <a
+                    href="product.html?id=6"
+                    class="card-btn"
+                >
+                    Толық ақпарат →
+                </a>
+            </div>
         </article>
-
     </div>
-
     <p id="noResult" class="no-result">
-        Планета табылмады 😕
+        Планета табылмады 😔
     </p>
-
 </section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section">
     <div class="section-title">
-        <span>БАЙЛАНЫС</span>
-        <h2>Бізге жазыңыз</h2>
-    </div>
-
-
-    <form id="contactForm" onsubmit="sendForm(event)">
-
-        <label>
-            Аты-жөніңіз
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Атыңызды енгізіңіз"
-                required
-            >
-        </label>
-
-
-        <label>
-            Email
-
-            <input
-                type="email"
-                id="email"
-                placeholder="example@mail.com"
-                required
-            >
-        </label>
-
-
-        <label>
-            Телефон
-
-            <input
-                type="tel"
-                id="phone"
-                placeholder="+7 700 000 00 00"
-                required
-            >
-        </label>
-
-
-        <label>
-            Хабарлама
-
-            <textarea
-                id="message"
-                placeholder="Хабарламаңызды жазыңыз..."
-                required
-            ></textarea>
-
-        </label>
-
-
-        <button class="btn" type="submit">
-            Жіберу →
-        </button>
-
-        <p id="formMessage"></p>
-
-    </form>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <div>
-        <b>✦ MysticSpace</b>
+        <span>04</span>
+        <h2>Бізбен байланыс</h2>
         <p>
-            Ғарышты бірге зерттейік 🚀
+            Сұрақтарыңыз немесе ұсыныстарыңыз болса,
+            төмендегі форманы толтырыңыз.
         </p>
     </div>
-
-    <div>
-        <h4>Бөлімдер</h4>
-        <a href="#home">Басты бет</a>
-        <a href="#about">Біз туралы</a>
-        <a href="#catalog">Планеталар</a>
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h3>
+                Ғарыш туралы сұрағыңыз бар ма?
+            </h3>
+            <p>
+                Бізге хабарлама жіберіңіз.
+                Барлық жолдарды толтыру қажет.
+            </p>
+            <div class="contact-item">
+                <span>📧</span>
+                <div>
+                    <strong>Email</strong>
+                    <p>info@mysticspace.kz</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span>📱</span>
+                <div>
+                    <strong>Телефон</strong>
+                    <p>+7 700 000 00 00</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span>🌌</span>
+                <div>
+                    <strong>Жоба</strong>
+                    <p>MysticSpace</p>
+                </div>
+            </div>
+        </div>
+        <!-- FORM -->
+        <form
+            id="contactForm"
+            class="contact-form"
+            onsubmit="sendForm(event)"
+        >
+            <div class="form-group">
+                <label for="name">
+                    Аты-жөніңіз
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Атыңызды енгізіңіз"
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for="email">
+                    Email
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@mail.com"
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for="phone">
+                    Телефон
+                </label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+7 700 000 00 00"
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for="message">
+                    Хабарлама
+                </label>
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Хабарламаңызды жазыңыз..."
+                    required
+                ></textarea>
+            </div>
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                🚀 Хабарлама жіберу
+            </button>
+            <p
+                id="formMessage"
+                class="form-message"
+            ></p>
+        </form>
     </div>
-
-    <div>
-        <h4>Байланыс</h4>
-        <p>info@mysticspace.kz</p>
-        <p>+7 700 000 00 00</p>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo">
+                🌌 MysticSpace
+            </div>
+            <p>
+                Ғарыш әлемін бірге зерттейік.
+            </p>
+        </div>
+        <div class="footer-links">
+            <h4>Навигация</h4>
+            <a href="#home">Басты бет</a>
+            <a href="#about">Біз туралы</a>
+            <a href="#services">Қызметтер</a>
+            <a href="#catalog">Планеталар</a>
+        </div>
+        <div class="footer-links">
+            <h4>Байланыс</h4>
+            <a href="#contact">Байланысу</a>
+            <a href="mailto:info@mysticspace.kz">
+                Email
+            </a>
+            <a href="#">
+                Instagram
+            </a>
+        </div>
     </div>
-
-    <div class="copyright">
-        © 2026 MysticSpace. Барлық құқықтар қорғалған.
+    <div class="footer-bottom">
+        <p>
+            © 2026 MysticSpace. Барлық құқықтар қорғалған.
+        </p>
+        <a href="404.html">
+            404 беті
+        </a>
     </div>
-
 </footer>
-
-
+<!-- ================= IMAGE SIZE ================= -->
+<style>
+.planet-image {
+    width: calc(100% + 52px);
+    height: 230px;
+    margin: -26px -26px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0b1025;
+}
+.planet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    display: block;
+}
+</style>
 <script src="script.js"></script>
-
 </body>
 </html>
