@@ -1,424 +1,778 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #060817;
-    color: #f3f4ff;
-    line-height: 1.6;
-}
-
-body.light {
-    background: #f4f5ff;
-    color: #15162b;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ================= HEADER ================= */
+    <title>MysticSpace — Ғарыш әлемі</title>
 
-header {
-    height: 72px;
-    padding: 0 7%;
+    <meta name="description" content="MysticSpace — ғарыш пен планеталар туралы интерактивті веб-сайт.">
 
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    border-bottom: 1px solid #252b4a;
-    background: #080b1c;
+<body>
 
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+<!-- ================= HEADER ================= -->
 
-.logo {
-    font-size: 23px;
-    font-weight: bold;
-    color: #c4b5fd;
-    white-space: nowrap;
-}
+<header class="header">
 
-nav {
-    display: flex;
-    gap: 22px;
-    margin-left: auto;
-}
+    <div class="logo">
+        🌌 MysticSpace
+    </div>
 
-nav a {
-    color: #b8c0d9;
-    transition: 0.3s;
-}
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
 
-nav a:hover {
-    color: #a78bfa;
-}
+    <nav id="nav">
 
-button {
-    background: #151b36;
-    color: white;
+        <a href="#home">Басты бет</a>
 
-    border: 1px solid #343d68;
-    border-radius: 9px;
+        <a href="#about">Біз туралы</a>
 
-    padding: 9px 12px;
-    cursor: pointer;
+        <a href="#services">Қызметтер</a>
 
-    transition: 0.3s;
-}
+        <a href="#catalog">Планеталар</a>
 
-button:hover {
-    transform: translateY(-2px);
-}
+        <a href="#contact">Байланыс</a>
 
-.menu-btn {
-    display: none;
-}
+    </nav>
 
-/* ================= HERO ================= */
+    <button class="theme-btn" onclick="toggleTheme()">
+        ☀️
+    </button>
 
-.hero {
-    min-height: 650px;
+</header>
 
-    padding: 80px 9%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+<!-- ================= HOME ================= -->
 
-    gap: 60px;
+<section id="home" class="hero">
 
-    background:
-        radial-gradient(
-            circle at 70%,
-            #29366c,
-            #060817 55%
-        );
-}
+    <div class="hero-content">
 
-.hero-text {
-    max-width: 650px;
-}
+        <p class="hero-small">
+            ҒАРЫШТЫҢ ЖҰМБАҚ ӘЛЕМІНЕ ҚОШ КЕЛДІҢІЗ
+        </p>
 
-.small-title {
-    color: #a78bfa;
+        <h1>
+            Ғаламның құпияларын<br>
+            бірге зерттейік
+        </h1>
 
-    letter-spacing: 2px;
+        <p>
+            MysticSpace — Күн жүйесіндегі планеталар туралы
+            қызықты ақпарат беретін заманауи интерактивті жоба.
+        </p>
 
-    font-size: 14px;
+        <a href="#catalog" class="main-btn">
+            🚀 Планеталарды зерттеу
+        </a>
 
-    font-weight: bold;
-}
+    </div>
 
-.hero h1 {
-    font-size: 65px;
+</section>
 
-    line-height: 1.05;
 
-    margin: 18px 0;
-}
+<!-- ================= ABOUT ================= -->
 
-.hero h1 b {
-    color: #a78bfa;
-}
+<section id="about" class="section">
 
-.hero p {
-    color: #b8c0d9;
+    <div class="section-title">
 
-    font-size: 19px;
+        <span>01</span>
 
-    max-width: 560px;
+        <h2>Біз туралы</h2>
 
-    margin-bottom: 30px;
-}
+        <p>
+            MysticSpace — ғарыш әлемін қарапайым әрі қызықты
+            түрде зерттеуге арналған веб-жоба.
+        </p>
 
-.btn {
-    display: inline-block;
+    </div>
 
-    background: #8b5cf6;
 
-    color: white;
+    <div class="about-grid">
 
-    padding: 12px 22px;
+        <div class="about-card">
 
-    border-radius: 10px;
+            <div class="about-icon">
+                🌌
+            </div>
 
-    font-weight: bold;
+            <h3>Ғарыш әлемі</h3>
 
-    border: none;
+            <p>
+                Күн жүйесі, планеталар және олардың
+                ерекшеліктері туралы ақпарат.
+            </p>
 
-    transition: 0.3s;
-}
+        </div>
 
-.btn:hover {
-    background: #7c3aed;
 
-    transform: translateY(-3px);
-}
+        <div class="about-card">
 
-.planet-animation {
-    width: 320px;
-    height: 320px;
+            <div class="about-icon">
+                🔭
+            </div>
 
-    border-radius: 50%;
+            <h3>Зерттеу</h3>
 
-    display: grid;
-    place-items: center;
+            <p>
+                Планеталарды зерттеп, олардың қызықты
+                қасиеттері туралы жаңа мәліметтер біліңіз.
+            </p>
 
-    font-size: 155px;
+        </div>
 
-    background:
-        radial-gradient(
-            circle,
-            #6655ad,
-            #171536
-        );
 
-    box-shadow:
-        0 0 90px #51429b;
+        <div class="about-card">
 
-    animation: floatPlanet 4s ease-in-out infinite;
-}
+            <div class="about-icon">
+                ✨
+            </div>
 
-@keyframes floatPlanet {
+            <h3>Қызықты ақпарат</h3>
 
-    0% {
-        transform: translateY(0);
-    }
+            <p>
+                Әр планетаға арналған қысқаша әрі
+                түсінікті фактілер жинағы.
+            </p>
 
-    50% {
-        transform: translateY(-20px);
-    }
+        </div>
 
-    100% {
-        transform: translateY(0);
-    }
-}
+    </div>
 
-/* ================= SECTIONS ================= */
+</section>
 
-.section {
-    padding: 80px 8%;
-}
 
-.section-title {
-    text-align: center;
+<!-- ================= SERVICES ================= -->
 
-    margin-bottom: 45px;
-}
+<section id="services" class="section services-section">
 
-.section-title span {
-    color: #a78bfa;
+    <div class="section-title">
 
-    letter-spacing: 2px;
+        <span>02</span>
 
-    font-size: 14px;
-}
+        <h2>Біздің мүмкіндіктер</h2>
 
-.section-title h2 {
-    font-size: 40px;
+        <p>
+            MysticSpace сайтында ғарышты зерттеуге
+            арналған бірнеше мүмкіндік бар.
+        </p>
 
-    margin: 8px 0;
-}
+    </div>
 
-.section-title p {
-    color: #aeb7d0;
-}
 
-/* ================= GRID ================= */
+    <div class="services-grid">
 
-.grid {
-    display: grid;
+        <!-- SERVICE 1 -->
 
-    gap: 22px;
-}
+        <div class="service-card">
 
-.three {
-    grid-template-columns:
-        repeat(3, 1fr);
-}
+            <div class="service-number">
+                01
+            </div>
 
-.four {
-    grid-template-columns:
-        repeat(4, 1fr);
-}
+            <div class="service-icon">
+                🪐
+            </div>
 
-/* ================= ABOUT ================= */
+            <h3>Планеталарды зерттеу</h3>
 
-.about-box {
-    max-width: 1000px;
+            <p>
+                Күн жүйесіндегі планеталар туралы
+                негізгі ақпаратпен танысыңыз.
+            </p>
 
-    margin: auto;
+        </div>
 
-    display: flex;
 
-    align-items: center;
+        <!-- SERVICE 2 -->
 
-    justify-content: space-between;
+        <div class="service-card">
 
-    gap: 40px;
+            <div class="service-number">
+                02
+            </div>
 
-    background: #10162d;
+            <div class="service-icon">
+                🔍
+            </div>
 
-    border: 1px solid #293252;
+            <h3>Іздеу жүйесі</h3>
 
-    border-radius: 18px;
+            <p>
+                Қажетті планетаны атауы арқылы
+                жылдам тауып алыңыз.
+            </p>
 
-    padding: 30px;
-}
+        </div>
 
-.about-box h3 {
-    font-size: 25px;
 
-    margin-bottom: 15px;
-}
+        <!-- SERVICE 3 -->
 
-.about-box p {
-    color: #b8c0d9;
+        <div class="service-card">
 
-    margin-bottom: 12px;
-}
+            <div class="service-number">
+                03
+            </div>
 
-.about-icon {
-    font-size: 100px;
+            <div class="service-icon">
+                📚
+            </div>
 
-    min-width: 180px;
+            <h3>Қызықты фактілер</h3>
 
-    text-align: center;
-}
+            <p>
+                Әр планетаның маңызды және
+                қызықты ерекшеліктерін оқыңыз.
+            </p>
 
-/* ================= SERVICE CARDS ================= */
+        </div>
 
-.service-card {
-    background: #10162d;
 
-    border: 1px solid #293252;
+        <!-- SERVICE 4 -->
 
-    border-radius: 18px;
+        <div class="service-card">
 
-    padding: 26px;
+            <div class="service-number">
+                04
+            </div>
 
-    transition: 0.3s;
-}
+            <div class="service-icon">
+                🌠
+            </div>
 
-.service-card:hover {
-    transform: translateY(-8px);
+            <h3>Интерактивті тәжірибе</h3>
 
-    border-color: #8b5cf6;
+            <p>
+                Заманауи дизайн және интерактивті
+                элементтер арқылы сайтты зерттеңіз.
+            </p>
 
-    box-shadow:
-        0 15px 40px
-        rgba(139, 92, 246, 0.15);
-}
+        </div>
 
-.icon {
-    font-size: 40px;
+    </div>
 
-    margin-bottom: 10px;
-}
+</section>
 
-.service-card h3 {
-    margin-bottom: 8px;
-}
 
-.service-card p {
-    color: #aeb7d0;
+<!-- ================= CATALOG ================= -->
 
-    font-size: 15px;
-}
+<section id="catalog" class="section catalog-section">
 
-/* ================= SEARCH ================= */
+    <div class="section-title">
 
-.search-box {
-    max-width: 600px;
+        <span>03</span>
 
-    margin: 0 auto 35px;
+        <h2>Планеталар каталогы</h2>
 
-    display: flex;
+        <p>
+            Күн жүйесіндегі планеталардың бірін таңдап,
+            толық ақпаратты қараңыз.
+        </p>
 
-    align-items: center;
+    </div>
 
-    gap: 10px;
 
-    background: #10162d;
+    <!-- SEARCH -->
 
-    border: 1px solid #39436a;
+    <div class="search-box">
 
-    border-radius: 12px;
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Планетаны іздеу..."
+            oninput="searchPlanets()"
+        >
 
-    padding: 5px 15px;
-}
+    </div>
 
-.search-box input {
-    width: 100%;
 
-    border: none;
+    <!-- PLANETS -->
 
-    outline: none;
+    <div class="planet-grid" id="planetGrid">
 
-    background: transparent;
 
-    color: white;
+        <!-- MERCURY -->
 
-    padding: 12px;
+        <article class="planet-card" data-name="меркурий">
 
-    font-size: 16px;
-}
+            <div class="planet-image mercury">
 
-/* ================= PLANET CARDS ================= */
+                <img
+                    src="images/mercury.jpg"
+                    alt="Меркурий"
+                >
 
-.planet-card {
-    background: #10162d;
+            </div>
 
-    border: 1px solid #293252;
+            <div class="planet-content">
 
-    border-radius: 18px;
+                <span class="planet-number">
+                    01
+                </span>
 
-    padding: 26px;
+                <h3>Меркурий</h3>
 
-    overflow: hidden;
+                <p>
+                    Күнге ең жақын және Күн жүйесіндегі
+                    ең кішкентай планета.
+                </p>
 
-    transition: 0.3s;
-}
+                <a href="product.html?id=1" class="card-btn">
+                    Толық ақпарат →
+                </a>
 
-.planet-card:hover {
-    transform: translateY(-8px);
+            </div>
 
-    border-color: #8b5cf6;
+        </article>
 
-    box-shadow:
-        0 15px 40px
-        rgba(139, 92, 246, 0.15);
-}
 
+        <!-- VENUS -->
 
-/* ФОТОҒА АРНАЛҒАН БӨЛІМ */
+        <article class="planet-card" data-name="венера">
+
+            <div class="planet-image venus">
+
+                <img
+                    src="images/venus.jpg"
+                    alt="Венера"
+                >
+
+            </div>
+
+            <div class="planet-content">
+
+                <span class="planet-number">
+                    02
+                </span>
+
+                <h3>Венера</h3>
+
+                <p>
+                    Жерге көлемі жағынан ұқсас,
+                    бірақ өте ыстық планета.
+                </p>
+
+                <a href="product.html?id=2" class="card-btn">
+                    Толық ақпарат →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- EARTH -->
+
+        <article class="planet-card" data-name="жер">
+
+            <div class="planet-image earth">
+
+                <img
+                    src="images/earth.jpg"
+                    alt="Жер"
+                >
+
+            </div>
+
+            <div class="planet-content">
+
+                <span class="planet-number">
+                    03
+                </span>
+
+                <h3>Жер</h3>
+
+                <p>
+                    Адамдар мен көптеген тіршілік
+                    иелері өмір сүретін планета.
+                </p>
+
+                <a href="product.html?id=3" class="card-btn">
+                    Толық ақпарат →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- MARS -->
+
+        <article class="planet-card" data-name="марс">
+
+            <div class="planet-image mars">
+
+                <img
+                    src="images/mars.jpg"
+                    alt="Марс"
+                >
+
+            </div>
+
+            <div class="planet-content">
+
+                <span class="planet-number">
+                    04
+                </span>
+
+                <h3>Марс</h3>
+
+                <p>
+                    Қызыл түсімен ерекшеленетін
+                    тасты планета.
+                </p>
+
+                <a href="product.html?id=4" class="card-btn">
+                    Толық ақпарат →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- JUPITER -->
+
+        <article class="planet-card" data-name="юпитер">
+
+            <div class="planet-image jupiter">
+
+                <img
+                    src="images/jupiter.jpg"
+                    alt="Юпитер"
+                >
+
+            </div>
+
+            <div class="planet-content">
+
+                <span class="planet-number">
+                    05
+                </span>
+
+                <h3>Юпитер</h3>
+
+                <p>
+                    Күн жүйесіндегі ең үлкен
+                    газ алыбы.
+                </p>
+
+                <a href="product.html?id=5" class="card-btn">
+                    Толық ақпарат →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SATURN -->
+
+        <article class="planet-card" data-name="сатурн">
+
+            <div class="planet-image saturn">
+
+                <img
+                    src="images/saturn.jpg"
+                    alt="Сатурн"
+                >
+
+            </div>
+
+            <div class="planet-content">
+
+                <span class="planet-number">
+                    06
+                </span>
+
+                <h3>Сатурн</h3>
+
+                <p>
+                    Үлкен әрі ерекше сақиналарымен
+                    танымал газ алыбы.
+                </p>
+
+                <a href="product.html?id=6" class="card-btn">
+                    Толық ақпарат →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <p id="noResult" class="no-result">
+        Планета табылмады 😔
+    </p>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="section-title">
+
+        <span>04</span>
+
+        <h2>Бізбен байланыс</h2>
+
+        <p>
+            Сұрақтарыңыз немесе ұсыныстарыңыз болса,
+            төмендегі форманы толтырыңыз.
+        </p>
+
+    </div>
+
+
+    <div class="contact-wrapper">
+
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+            <h3>
+                Ғарыш туралы сұрағыңыз бар ма?
+            </h3>
+
+            <p>
+                Бізге хабарлама жіберіңіз.
+                Форманың барлық жолдарын толтыру қажет.
+            </p>
+
+
+            <div class="contact-item">
+
+                <span>📧</span>
+
+                <div>
+                    <strong>Email</strong>
+                    <p>info@mysticspace.kz</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span>📱</span>
+
+                <div>
+                    <strong>Телефон</strong>
+                    <p>+7 700 000 00 00</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span>🌌</span>
+
+                <div>
+                    <strong>Жоба</strong>
+                    <p>MysticSpace</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form
+            id="contactForm"
+            class="contact-form"
+            onsubmit="sendForm(event)"
+        >
+
+            <div class="form-group">
+
+                <label for="name">
+                    Аты-жөніңіз
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Атыңызды енгізіңіз"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@mail.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Телефон
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+7 700 000 00 00"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Хабарлама
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Хабарламаңызды жазыңыз..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                🚀 Хабарлама жіберу
+            </button>
+
+
+            <p
+                id="formMessage"
+                class="form-message"
+            ></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                🌌 MysticSpace
+            </div>
+
+            <p>
+                Ғарыш әлемін бірге зерттейік.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Навигация</h4>
+
+            <a href="#home">
+                Басты бет
+            </a>
+
+            <a href="#about">
+                Біз туралы
+            </a>
+
+            <a href="#services">
+                Қызметтер
+            </a>
+
+            <a href="#catalog">
+                Планеталар
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Байланыс</h4>
+
+            <a href="#contact">
+                Байланысу
+            </a>
+
+            <a href="mailto:info@mysticspace.kz">
+                Email
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MysticSpace. Барлық құқықтар қорғалған.
+        </p>
+
+        <a href="404.html">
+            404 беті
+        </a>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= IMAGE SIZE ================= -->
+
+<style>
 
 .planet-image {
     width: calc(100% + 52px);
-
     height: 230px;
 
-    margin:
-        -26px
-        -26px
-        20px;
+    margin: -26px -26px 20px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
@@ -426,456 +780,23 @@ button:hover {
     background: #0b1025;
 }
 
-
-/* ПЛАНЕТАНЫҢ ФОТОСЫ */
-
 .planet-image img {
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
 
-    display: block;
-
     padding: 15px;
 
-    transition: 0.4s;
-}
-
-
-/* ФОТО ҮЛКЕЮ */
-
-.planet-card:hover
-.planet-image img {
-    transform: scale(1.06);
-}
-
-
-/* ӘР ПЛАНЕТАҒА ЖЕҢІЛ ФОН */
-
-.mercury {
-    background:
-        radial-gradient(
-            circle,
-            #50505a,
-            #151723
-        );
-}
-
-.venus {
-    background:
-        radial-gradient(
-            circle,
-            #8a633b,
-            #21150c
-        );
-}
-
-.earth {
-    background:
-        radial-gradient(
-            circle,
-            #204d83,
-            #071326
-        );
-}
-
-.mars {
-    background:
-        radial-gradient(
-            circle,
-            #7b3025,
-            #210b08
-        );
-}
-
-.jupiter {
-    background:
-        radial-gradient(
-            circle,
-            #79513b,
-            #21130c
-        );
-}
-
-.saturn {
-    background:
-        radial-gradient(
-            circle,
-            #8c724d,
-            #201a11
-        );
-}
-
-
-/* TAG */
-
-.tag {
-    color: #a78bfa;
-
-    font-size: 12px;
-
-    letter-spacing: 1.5px;
-
-    font-weight: bold;
-}
-
-
-/* ПЛАНЕТА АТАУЫ */
-
-.planet-card h3 {
-    font-size: 24px;
-
-    margin:
-        8px 0;
-}
-
-
-/* СИПАТТАМА */
-
-.planet-card p {
-    color: #aeb7d0;
-
-    font-size: 15px;
-}
-
-
-/* ТОЛЫҚ АҚПАРАТ */
-
-.planet-card a {
-    display: inline-block;
-
-    color: #c4b5fd;
-
-    margin-top: 12px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.planet-card a:hover {
-    color: #ffffff;
-}
-
-
-/* НӘТИЖЕ ЖОҚ */
-
-.no-result {
-    display: none;
-
-    text-align: center;
-
-    color: #aeb7d0;
-
-    margin-top: 30px;
-}
-
-/* ================= FORM ================= */
-
-form {
-    max-width: 650px;
-
-    margin: auto;
-
-    display: grid;
-
-    gap: 16px;
-
-    background: #10162d;
-
-    border: 1px solid #293252;
-
-    border-radius: 18px;
-
-    padding: 26px;
-}
-
-label {
-    display: grid;
-
-    gap: 7px;
-
-    color: #cbd2e5;
-}
-
-input,
-textarea {
-    padding: 13px;
-
-    border-radius: 9px;
-
-    border: 1px solid #39436a;
-
-    background: #090e21;
-
-    color: white;
-
-    outline: none;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #8b5cf6;
-}
-
-textarea {
-    min-height: 130px;
-
-    resize: vertical;
-}
-
-#formMessage {
-    color: #a78bfa;
-
-    font-weight: bold;
-}
-
-/* ================= DETAIL PAGE ================= */
-
-.detail-page {
-    max-width: 1100px;
-
-    margin: 80px auto;
-
-    padding: 0 25px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.detail-planet {
-    height: 400px;
-
-    border-radius: 30px;
-
-    display: grid;
-
-    place-items: center;
-
-    background:
-        radial-gradient(
-            circle,
-            #5b4a9d,
-            #171536
-        );
-
-    box-shadow:
-        0 0 80px
-        rgba(81, 66, 155, 0.5);
-}
-
-#planetSymbol {
-    font-size: 160px;
-}
-
-.detail-content h1 {
-    font-size: 58px;
-
-    margin: 10px 0 15px;
-}
-
-.detail-content p {
-    color: #b8c0d9;
-
-    font-size: 18px;
-
-    margin: 25px 0;
-}
-
-.detail-content h2 {
-    margin-bottom: 10px;
-}
-
-.detail-content ul {
-    margin-bottom: 30px;
-
-    padding-left: 25px;
-
-    color: #cbd2e5;
-}
-
-/* ================= FOOTER ================= */
-
-footer {
-    padding: 45px 8%;
-
-    border-top: 1px solid #252b4a;
-
-    display: flex;
-
-    gap: 50px;
-
-    flex-wrap: wrap;
-
-    color: #9da7c1;
-}
-
-footer b {
-    color: #c4b5fd;
-
-    font-size: 20px;
-}
-
-footer h4 {
-    color: white;
-
-    margin-bottom: 8px;
-}
-
-footer a {
     display: block;
-
-    margin: 4px 0;
 }
 
-.copyright {
-    width: 100%;
+</style>
 
-    padding-top: 20px;
 
-    border-top: 1px solid #252b4a;
-}
+<!-- ================= JAVASCRIPT ================= -->
 
-/* ================= TABLET ================= */
+<script src="script.js"></script>
 
-@media (max-width: 900px) {
-
-    nav {
-        gap: 12px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-    .three {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .four {
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-/* ================= PHONE ================= */
-
-@media (max-width: 700px) {
-
-    header {
-        padding: 0 5%;
-    }
-
-    .menu-btn {
-        display: block;
-
-        margin-left: auto;
-    }
-
-    nav {
-        display: none;
-
-        position: absolute;
-
-        top: 72px;
-
-        left: 0;
-
-        width: 100%;
-
-        padding: 20px;
-
-        background: #080b1c;
-
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    nav.open {
-        display: flex;
-    }
-
-    .theme-btn {
-        display: none;
-    }
-
-    .hero {
-        flex-direction: column;
-
-        text-align: center;
-
-        padding: 70px 6%;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .planet-animation {
-        width: 230px;
-
-        height: 230px;
-
-        font-size: 110px;
-    }
-
-    .section {
-        padding: 60px 6%;
-    }
-
-    .section-title h2 {
-        font-size: 32px;
-    }
-
-    .three,
-    .four {
-        grid-template-columns: 1fr;
-    }
-
-    .about-box {
-        flex-direction: column;
-    }
-
-    /* Телефонда да фото толық сыяды */
-
-    .planet-image {
-        height: 220px;
-    }
-
-    .planet-image img {
-        padding: 12px;
-
-        object-fit: contain;
-    }
-
-    .detail-page {
-        grid-template-columns: 1fr;
-
-        margin: 40px auto;
-    }
-
-    .detail-planet {
-        height: 280px;
-    }
-
-    #planetSymbol {
-        font-size: 120px;
-    }
-
-    .detail-content h1 {
-        font-size: 42px;
-    }
-
-}
+</body>
+</html>
