@@ -1,418 +1,881 @@
-<!DOCTYPE html>
-<html lang="kk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MysticSpace — Ғарыш әлеміi</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #060817;
+    color: #f3f4ff;
+    line-height: 1.6;
+}
+
+body.light {
+    background: #f4f5ff;
+    color: #15162b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-<body>
+/* ================= HEADER ================= */
 
-<header>
-    <a href="index.html" class="logo">✦ MysticSpace</a>
+header {
+    height: 72px;
+    padding: 0 7%;
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    display: flex;
+    align-items: center;
+    gap: 25px;
 
-    <nav id="nav">
-        <a href="#home">Басты бет</a>
-        <a href="#about">Біз туралы</a>
-        <a href="#services">Қызметтер</a>
-        <a href="#catalog">Планеталар</a>
-        <a href="#contact">Байланыс</a>
-    </nav>
+    border-bottom: 1px solid #252b4a;
+    background: #080b1c;
 
-    <button class="theme-btn" onclick="toggleTheme()">☾</button>
-</header>
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #c4b5fd;
+    white-space: nowrap;
+}
 
-<!-- HOME -->
-<section id="home" class="hero">
-
-    <div class="hero-text">
+nav {
+    display: flex;
+    gap: 22px;
+    margin-left: auto;
+}
 
-        <span class="small-title"> MYSTICSPACE</span>
-
-        <h1>
-            Ғарыш
-            <br>
-            <b>сіз ойлағаннан да жақын.</b>
-        </h1>
-
-        <p>
-            Планеталар, жұлдыздар және ғарыш әлемі туралы
-            қызықты әрі қысқа ақпаратты бір жерден зерттеңіз.
-        </p>
+nav a {
+    color: #b8c0d9;
+    transition: 0.3s;
+}
 
-        <a href="#catalog" class="btn">
-            Ғарышты зерттеу →
-        </a>
+nav a:hover {
+    color: #a78bfa;
+}
 
-    </div>
+button {
+    background: #151b36;
+    color: white;
 
-    <div class="planet-animation">
-        
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section id="about" class="section">
-
-    <div class="section-title">
-        <span>БІЗ ТУРАЛЫ</span>
-        <h2>MysticSpace деген не?</h2>
-    </div>
-
-    <div class="about-box">
-
-        <div>
-            <h3> Біздің мақсатымыз</h3>
-
-            <p>
-                MysticSpace — ғарыш туралы ақпаратты
-                қарапайым және қызықты түрде ұсынатын
-                оқу жобасы.
-            </p>
-
-            <p>
-                Мұнда қолданушы планеталарды қарап,
-                іздеу арқылы қажетті нысанды тауып,
-                әр планета туралы толық ақпаратқа өте алады.
-            </p>
-        </div>
+    border: 1px solid #343d68;
+    border-radius: 9px;
 
-        <div class="about-icon">
-            
-        </div>
+    padding: 9px 12px;
+    cursor: pointer;
 
-    </div>
+    transition: 0.3s;
+}
 
-</section>
+button:hover {
+    transform: translateY(-2px);
+}
 
+.menu-btn {
+    display: none;
+}
 
-<!-- SERVICES -->
-<section id="services" class="section">
+/* ================= HERO ================= */
 
-    <div class="section-title">
-        <span>МҮМКІНДІКТЕР</span>
-        <h2>Нені зерттей аласың?</h2>
-    </div>
-
-    <div class="grid four">
+.hero {
+    min-height: 650px;
 
-        <article class="service-card">
-            <div class="icon"></div>
-            <h3>Планеталар</h3>
-            <p>
-                Күн жүйесіндегі планеталар
-                туралы ақпарат.
-            </p>
-        </article>
+    padding: 80px 9%;
 
-        <article class="service-card">
-            <div class="icon"></div>
-            <h3>Жұлдыздар</h3>
-            <p>
-                Жұлдыздардың ерекшеліктері
-                мен ғарыштағы орны.
-            </p>
-        </article>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        <article class="service-card">
-            <div class="icon"></div>
-            <h3>Галактикалар</h3>
-            <p>
-                Әлемдегі алып галактикалар
-                туралы мәлімет.
-            </p>
-        </article>
+    gap: 60px;
 
-        <article class="service-card">
-            <div class="icon"></div>
-            <h3>Ғарыш миссиялары</h3>
-            <p>
-                Ғарышты зерттейтін
-                миссиялар туралы.
-            </p>
-        </article>
+    background:
+        radial-gradient(
+            circle at 70%,
+            #29366c,
+            #060817 55%
+        );
+}
 
-    </div>
+.hero-text {
+    max-width: 650px;
+}
 
-</section>
+.small-title {
+    color: #a78bfa;
 
+    letter-spacing: 2px;
 
-<!-- CATALOG -->
-<section id="catalog" class="section catalog-section">
+    font-size: 14px;
 
-    <div class="section-title">
-        <span>КАТАЛОГ</span>
-        <h2>Күн жүйесінің планеталары</h2>
-        <p>
-            Қалаған планетаңды іздеп көр.
-        </p>
-    </div>
+    font-weight: bold;
+}
 
-    <div class="search-box">
-        
-        <input
-            type="text"
-            id="search"
-            placeholder="Планетаны іздеу..."
-            oninput="searchPlanets()"
-        >
-    </div>
+.hero h1 {
+    font-size: 65px;
 
+    line-height: 1.05;
 
-    <div id="cards" class="grid three">
+    margin: 18px 0;
+}
 
-        <!-- MERCURY -->
-        <article class="planet-card" data-name="меркурий">
+.hero h1 b {
+    color: #a78bfa;
+}
 
-            <div class="planet-image mercury">
-                 <img src="C:\Users\Пользователь\Downloads\Mercury_in_color_-_Prockter07_centered.jpg" alt="Меркурий">
-            </div>
+.hero p {
+    color: #b8c0d9;
 
-            <span class="tag">ПЛАНЕТА</span>
+    font-size: 19px;
 
-            <h3>Меркурий</h3>
+    max-width: 560px;
 
-            <p>
-                Күнге ең жақын орналасқан
-                планета.
-            </p>
+    margin-bottom: 30px;
+}
 
-            <a href="product.html?id=1">
-                Толық ақпарат →
-            </a>
+.btn {
+    display: inline-block;
 
-        </article>
+    background: #8b5cf6;
 
+    color: white;
 
-        <!-- VENUS -->
-        <article class="planet-card" data-name="венера">
+    padding: 12px 22px;
 
-            <div class="planet-image venus">
-                ♀
-            </div>
+    border-radius: 10px;
 
-            <span class="tag">ПЛАНЕТА</span>
+    font-weight: bold;
 
-            <h3>Венера</h3>
+    border: none;
 
-            <p>
-                Тығыз атмосферасы бар
-                өте ыстық планета.
-            </p>
+    transition: 0.3s;
+}
 
-            <a href="product.html?id=2">
-                Толық ақпарат →
-            </a>
+.btn:hover {
+    background: #7c3aed;
 
-        </article>
+    transform: translateY(-3px);
+}
 
+.planet-animation {
+    width: 320px;
+    height: 320px;
 
-        <!-- EARTH -->
-        <article class="planet-card" data-name="жер">
+    border-radius: 50%;
 
-            <div class="planet-image earth">
-                <img src="C:\Users\Пользователь\Downloads\Mercury_in_color_-_Prockter07_centered.jpg" alt="Меркурий">
-            </div>
+    display: grid;
+    place-items: center;
 
-            <span class="tag">ПЛАНЕТА</span>
+    font-size: 155px;
 
-            <h3>Жер</h3>
+    background:
+        radial-gradient(
+            circle,
+            #6655ad,
+            #171536
+        );
 
-            <p>
-                Біз өмір сүретін ғаламшар.
-            </p>
+    box-shadow:
+        0 0 90px #51429b;
 
-            <a href="product.html?id=3">
-                Толық ақпарат →
-            </a>
+    animation: floatPlanet 4s ease-in-out infinite;
+}
 
-        </article>
+@keyframes floatPlanet {
 
+    0% {
+        transform: translateY(0);
+    }
 
-        <!-- MARS -->
-        <article class="planet-card" data-name="марс">
+    50% {
+        transform: translateY(-20px);
+    }
 
-            <div class="planet-image mars">
-                ♂
-            </div>
+    100% {
+        transform: translateY(0);
+    }
+}
 
-            <span class="tag">ПЛАНЕТА</span>
+/* ================= SECTIONS ================= */
 
-            <h3>Марс</h3>
+.section {
+    padding: 80px 8%;
+}
 
-            <p>
-                Қызыл планета ретінде
-                танымал.
-            </p>
+.section-title {
+    text-align: center;
 
-            <a href="product.html?id=4">
-                Толық ақпарат →
-            </a>
+    margin-bottom: 45px;
+}
 
-        </article>
+.section-title span {
+    color: #a78bfa;
 
+    letter-spacing: 2px;
 
-        <!-- JUPITER -->
-        <article class="planet-card" data-name="юпитер">
+    font-size: 14px;
+}
 
-            <div class="planet-image jupiter">
-                ♃
-            </div>
+.section-title h2 {
+    font-size: 40px;
 
-            <span class="tag">ГАЗ АЛЫБЫ</span>
+    margin: 8px 0;
+}
 
-            <h3>Юпитер</h3>
+.section-title p {
+    color: #aeb7d0;
+}
 
-            <p>
-                Күн жүйесіндегі ең үлкен
-                планета.
-            </p>
+/* ================= GRID ================= */
 
-            <a href="product.html?id=5">
-                Толық ақпарат →
-            </a>
+.grid {
+    display: grid;
 
-        </article>
+    gap: 22px;
+}
 
+.three {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
 
-        <!-- SATURN -->
-        <article class="planet-card" data-name="сатурн">
+.four {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
 
-            <div class="planet-image saturn">
-                
-            </div>
+/* ================= ABOUT ================= */
 
-            <span class="tag">ГАЗ АЛЫБЫ</span>
+.about-box {
+    max-width: 1000px;
 
-            <h3>Сатурн</h3>
+    margin: auto;
 
-            <p>
-                Әдемі сақиналарымен
-                танымал планета.
-            </p>
+    display: flex;
 
-            <a href="product.html?id=6">
-                Толық ақпарат →
-            </a>
+    align-items: center;
 
-        </article>
+    justify-content: space-between;
 
-    </div>
+    gap: 40px;
 
-    <p id="noResult" class="no-result">
-        Планета табылмады 
-    </p>
+    background: #10162d;
 
-</section>
+    border: 1px solid #293252;
 
+    border-radius: 18px;
 
-<!-- CONTACT -->
-<section id="contact" class="section">
+    padding: 30px;
+}
 
-    <div class="section-title">
-        <span>БАЙЛАНЫС</span>
-        <h2>Бізге жазыңыз</h2>
-    </div>
+.about-box h3 {
+    font-size: 25px;
 
+    margin-bottom: 15px;
+}
 
-    <form id="contactForm" onsubmit="sendForm(event)">
+.about-box p {
+    color: #b8c0d9;
 
-        <label>
-            Аты-жөніңіз
+    margin-bottom: 12px;
+}
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Атыңызды енгізіңіз"
-                required
-            >
-        </label>
+.about-icon {
+    font-size: 100px;
 
+    min-width: 180px;
 
-        <label>
-            Email
+    text-align: center;
+}
 
-            <input
-                type="email"
-                id="email"
-                placeholder="example@mail.com"
-                required
-            >
-        </label>
+/* ================= SERVICE CARDS ================= */
 
+.service-card {
+    background: #10162d;
 
-        <label>
-            Телефон
+    border: 1px solid #293252;
 
-            <input
-                type="tel"
-                id="phone"
-                placeholder="+7 700 000 00 00"
-                required
-            >
-        </label>
+    border-radius: 18px;
 
+    padding: 26px;
 
-        <label>
-            Хабарлама
+    transition: 0.3s;
+}
 
-            <textarea
-                id="message"
-                placeholder="Хабарламаңызды жазыңыз..."
-                required
-            ></textarea>
+.service-card:hover {
+    transform: translateY(-8px);
 
-        </label>
+    border-color: #8b5cf6;
 
+    box-shadow:
+        0 15px 40px
+        rgba(139, 92, 246, 0.15);
+}
 
-        <button class="btn" type="submit">
-            Жіберу →
-        </button>
+.icon {
+    font-size: 40px;
 
-        <p id="formMessage"></p>
+    margin-bottom: 10px;
+}
 
-    </form>
+.service-card h3 {
+    margin-bottom: 8px;
+}
 
-</section>
+.service-card p {
+    color: #aeb7d0;
 
+    font-size: 15px;
+}
 
-<!-- FOOTER -->
-<footer>
+/* ================= SEARCH ================= */
 
-    <div>
-        <b>✦ MysticSpace</b>
-        <p>
-            Ғарышты бірге зерттейік 
-        </p>
-    </div>
+.search-box {
+    max-width: 600px;
 
-    <div>
-        <h4>Бөлімдер</h4>
-        <a href="#home">Басты бет</a>
-        <a href="#about">Біз туралы</a>
-        <a href="#catalog">Планеталар</a>
-    </div>
+    margin: 0 auto 35px;
 
-    <div>
-        <h4>Байланыс</h4>
-        <p>info@mysticspace.kz</p>
-        <p>+7 700 000 00 00</p>
-    </div>
+    display: flex;
 
-    <div class="copyright">
-        © 2026 MysticSpace. Барлық құқықтар қорғалған.
-    </div>
+    align-items: center;
 
-</footer>
+    gap: 10px;
 
+    background: #10162d;
 
-<script src="script.js"></script>
+    border: 1px solid #39436a;
 
-</body>
-</html>
+    border-radius: 12px;
+
+    padding: 5px 15px;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 12px;
+
+    font-size: 16px;
+}
+
+/* ================= PLANET CARDS ================= */
+
+.planet-card {
+    background: #10162d;
+
+    border: 1px solid #293252;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.planet-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 15px 40px
+        rgba(139, 92, 246, 0.15);
+}
+
+
+/* ФОТОҒА АРНАЛҒАН БӨЛІМ */
+
+.planet-image {
+    width: calc(100% + 52px);
+
+    height: 230px;
+
+    margin:
+        -26px
+        -26px
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #0b1025;
+}
+
+
+/* ПЛАНЕТАНЫҢ ФОТОСЫ */
+
+.planet-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    padding: 15px;
+
+    transition: 0.4s;
+}
+
+
+/* ФОТО ҮЛКЕЮ */
+
+.planet-card:hover
+.planet-image img {
+    transform: scale(1.06);
+}
+
+
+/* ӘР ПЛАНЕТАҒА ЖЕҢІЛ ФОН */
+
+.mercury {
+    background:
+        radial-gradient(
+            circle,
+            #50505a,
+            #151723
+        );
+}
+
+.venus {
+    background:
+        radial-gradient(
+            circle,
+            #8a633b,
+            #21150c
+        );
+}
+
+.earth {
+    background:
+        radial-gradient(
+            circle,
+            #204d83,
+            #071326
+        );
+}
+
+.mars {
+    background:
+        radial-gradient(
+            circle,
+            #7b3025,
+            #210b08
+        );
+}
+
+.jupiter {
+    background:
+        radial-gradient(
+            circle,
+            #79513b,
+            #21130c
+        );
+}
+
+.saturn {
+    background:
+        radial-gradient(
+            circle,
+            #8c724d,
+            #201a11
+        );
+}
+
+
+/* TAG */
+
+.tag {
+    color: #a78bfa;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: bold;
+}
+
+
+/* ПЛАНЕТА АТАУЫ */
+
+.planet-card h3 {
+    font-size: 24px;
+
+    margin:
+        8px 0;
+}
+
+
+/* СИПАТТАМА */
+
+.planet-card p {
+    color: #aeb7d0;
+
+    font-size: 15px;
+}
+
+
+/* ТОЛЫҚ АҚПАРАТ */
+
+.planet-card a {
+    display: inline-block;
+
+    color: #c4b5fd;
+
+    margin-top: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.planet-card a:hover {
+    color: #ffffff;
+}
+
+
+/* НӘТИЖЕ ЖОҚ */
+
+.no-result {
+    display: none;
+
+    text-align: center;
+
+    color: #aeb7d0;
+
+    margin-top: 30px;
+}
+
+/* ================= FORM ================= */
+
+form {
+    max-width: 650px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 16px;
+
+    background: #10162d;
+
+    border: 1px solid #293252;
+
+    border-radius: 18px;
+
+    padding: 26px;
+}
+
+label {
+    display: grid;
+
+    gap: 7px;
+
+    color: #cbd2e5;
+}
+
+input,
+textarea {
+    padding: 13px;
+
+    border-radius: 9px;
+
+    border: 1px solid #39436a;
+
+    background: #090e21;
+
+    color: white;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #8b5cf6;
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+#formMessage {
+    color: #a78bfa;
+
+    font-weight: bold;
+}
+
+/* ================= DETAIL PAGE ================= */
+
+.detail-page {
+    max-width: 1100px;
+
+    margin: 80px auto;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.detail-planet {
+    height: 400px;
+
+    border-radius: 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #5b4a9d,
+            #171536
+        );
+
+    box-shadow:
+        0 0 80px
+        rgba(81, 66, 155, 0.5);
+}
+
+#planetSymbol {
+    font-size: 160px;
+}
+
+.detail-content h1 {
+    font-size: 58px;
+
+    margin: 10px 0 15px;
+}
+
+.detail-content p {
+    color: #b8c0d9;
+
+    font-size: 18px;
+
+    margin: 25px 0;
+}
+
+.detail-content h2 {
+    margin-bottom: 10px;
+}
+
+.detail-content ul {
+    margin-bottom: 30px;
+
+    padding-left: 25px;
+
+    color: #cbd2e5;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 45px 8%;
+
+    border-top: 1px solid #252b4a;
+
+    display: flex;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    color: #9da7c1;
+}
+
+footer b {
+    color: #c4b5fd;
+
+    font-size: 20px;
+}
+
+footer h4 {
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+footer a {
+    display: block;
+
+    margin: 4px 0;
+}
+
+.copyright {
+    width: 100%;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #252b4a;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .three {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .four {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* ================= PHONE ================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    .menu-btn {
+        display: block;
+
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background: #080b1c;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .theme-btn {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .planet-animation {
+        width: 230px;
+
+        height: 230px;
+
+        font-size: 110px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .three,
+    .four {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    /* Телефонда да фото толық сыяды */
+
+    .planet-image {
+        height: 220px;
+    }
+
+    .planet-image img {
+        padding: 12px;
+
+        object-fit: contain;
+    }
+
+    .detail-page {
+        grid-template-columns: 1fr;
+
+        margin: 40px auto;
+    }
+
+    .detail-planet {
+        height: 280px;
+    }
+
+    #planetSymbol {
+        font-size: 120px;
+    }
+
+    .detail-content h1 {
+        font-size: 42px;
+    }
+
+}
