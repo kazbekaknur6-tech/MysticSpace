@@ -4,11 +4,9 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -17,18 +15,17 @@ body {
     line-height: 1.6;
 }
 
-
 body.light {
     background: #f4f5ff;
     color: #15162b;
 }
-
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* ================= HEADER ================= */
 
 header {
     height: 72px;
@@ -36,77 +33,60 @@ header {
 
     display: flex;
     align-items: center;
-
     gap: 25px;
 
     border-bottom: 1px solid #252b4a;
-
     background: #080b1c;
 
     position: sticky;
     top: 0;
-
     z-index: 100;
 }
-
 
 .logo {
     font-size: 23px;
     font-weight: bold;
-
     color: #c4b5fd;
-
     white-space: nowrap;
 }
 
-
 nav {
     display: flex;
-
     gap: 22px;
-
     margin-left: auto;
 }
 
-
 nav a {
     color: #b8c0d9;
-
     transition: 0.3s;
 }
-
 
 nav a:hover {
     color: #a78bfa;
 }
 
-
 button {
     background: #151b36;
-
     color: white;
 
     border: 1px solid #343d68;
-
     border-radius: 9px;
 
     padding: 9px 12px;
-
     cursor: pointer;
 
     transition: 0.3s;
 }
 
-
 button:hover {
     transform: translateY(-2px);
 }
-
 
 .menu-btn {
     display: none;
 }
 
+/* ================= HERO ================= */
 
 .hero {
     min-height: 650px;
@@ -114,9 +94,7 @@ button:hover {
     padding: 80px 9%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 60px;
@@ -129,11 +107,9 @@ button:hover {
         );
 }
 
-
 .hero-text {
     max-width: 650px;
 }
-
 
 .small-title {
     color: #a78bfa;
@@ -145,7 +121,6 @@ button:hover {
     font-weight: bold;
 }
 
-
 .hero h1 {
     font-size: 65px;
 
@@ -154,11 +129,9 @@ button:hover {
     margin: 18px 0;
 }
 
-
 .hero h1 b {
     color: #a78bfa;
 }
-
 
 .hero p {
     color: #b8c0d9;
@@ -169,7 +142,6 @@ button:hover {
 
     margin-bottom: 30px;
 }
-
 
 .btn {
     display: inline-block;
@@ -189,23 +161,19 @@ button:hover {
     transition: 0.3s;
 }
 
-
 .btn:hover {
     background: #7c3aed;
 
     transform: translateY(-3px);
 }
 
-
 .planet-animation {
     width: 320px;
-
     height: 320px;
 
     border-radius: 50%;
 
     display: grid;
-
     place-items: center;
 
     font-size: 155px;
@@ -223,7 +191,6 @@ button:hover {
     animation: floatPlanet 4s ease-in-out infinite;
 }
 
-
 @keyframes floatPlanet {
 
     0% {
@@ -237,21 +204,19 @@ button:hover {
     100% {
         transform: translateY(0);
     }
-
 }
 
+/* ================= SECTIONS ================= */
 
 .section {
     padding: 80px 8%;
 }
-
 
 .section-title {
     text-align: center;
 
     margin-bottom: 45px;
 }
-
 
 .section-title span {
     color: #a78bfa;
@@ -261,18 +226,17 @@ button:hover {
     font-size: 14px;
 }
 
-
 .section-title h2 {
     font-size: 40px;
 
     margin: 8px 0;
 }
 
-
 .section-title p {
     color: #aeb7d0;
 }
 
+/* ================= GRID ================= */
 
 .grid {
     display: grid;
@@ -280,67 +244,17 @@ button:hover {
     gap: 22px;
 }
 
-
 .three {
     grid-template-columns:
         repeat(3, 1fr);
 }
-
 
 .four {
     grid-template-columns:
         repeat(4, 1fr);
 }
 
-
-.service-card,
-.planet-card,
-.about-box,
-form {
-    background: #10162d;
-
-    border: 1px solid #293252;
-
-    border-radius: 18px;
-
-    padding: 26px;
-
-    transition: 0.3s;
-}
-
-
-.service-card:hover,
-.planet-card:hover {
-    transform: translateY(-8px);
-
-    border-color: #8b5cf6;
-
-    box-shadow:
-        0 15px 40px
-        rgba(139, 92, 246, 0.15);
-}
-
-
-.icon {
-    font-size: 40px;
-
-    margin-bottom: 10px;
-}
-
-
-.service-card h3,
-.planet-card h3 {
-    margin-bottom: 8px;
-}
-
-
-.service-card p,
-.planet-card p {
-    color: #aeb7d0;
-
-    font-size: 15px;
-}
-
+/* ================= ABOUT ================= */
 
 .about-box {
     max-width: 1000px;
@@ -354,8 +268,15 @@ form {
     justify-content: space-between;
 
     gap: 40px;
-}
 
+    background: #10162d;
+
+    border: 1px solid #293252;
+
+    border-radius: 18px;
+
+    padding: 30px;
+}
 
 .about-box h3 {
     font-size: 25px;
@@ -363,13 +284,11 @@ form {
     margin-bottom: 15px;
 }
 
-
 .about-box p {
     color: #b8c0d9;
 
     margin-bottom: 12px;
 }
-
 
 .about-icon {
     font-size: 100px;
@@ -379,6 +298,47 @@ form {
     text-align: center;
 }
 
+/* ================= SERVICE CARDS ================= */
+
+.service-card {
+    background: #10162d;
+
+    border: 1px solid #293252;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 15px 40px
+        rgba(139, 92, 246, 0.15);
+}
+
+.icon {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    color: #aeb7d0;
+
+    font-size: 15px;
+}
+
+/* ================= SEARCH ================= */
 
 .search-box {
     max-width: 600px;
@@ -400,7 +360,6 @@ form {
     padding: 5px 15px;
 }
 
-
 .search-box input {
     width: 100%;
 
@@ -417,87 +376,140 @@ form {
     font-size: 16px;
 }
 
+/* ================= PLANET CARDS ================= */
 
 .planet-card {
+    background: #10162d;
+
+    border: 1px solid #293252;
+
+    border-radius: 18px;
+
+    padding: 26px;
+
     overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.planet-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 15px 40px
+        rgba(139, 92, 246, 0.15);
 }
 
 
+/* ФОТОҒА АРНАЛҒАН БӨЛІМ */
+
 .planet-image {
-    height: 200px;
+    width: calc(100% + 52px);
+
+    height: 230px;
 
     margin:
         -26px
         -26px
         20px;
 
-    display: grid;
+    display: flex;
 
-    place-items: center;
+    align-items: center;
 
-    font-size: 95px;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #0b1025;
 }
 
+
+/* ПЛАНЕТАНЫҢ ФОТОСЫ */
+
+.planet-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    padding: 15px;
+
+    transition: 0.4s;
+}
+
+
+/* ФОТО ҮЛКЕЮ */
+
+.planet-card:hover
+.planet-image img {
+    transform: scale(1.06);
+}
+
+
+/* ӘР ПЛАНЕТАҒА ЖЕҢІЛ ФОН */
 
 .mercury {
     background:
         radial-gradient(
             circle,
-            #8f8f9c,
-            #30303c
+            #50505a,
+            #151723
         );
 }
-
 
 .venus {
     background:
         radial-gradient(
             circle,
-            #e4a85f,
-            #593514
+            #8a633b,
+            #21150c
         );
 }
-
 
 .earth {
     background:
         radial-gradient(
             circle,
-            #438bd4,
-            #14274d
+            #204d83,
+            #071326
         );
 }
-
 
 .mars {
     background:
         radial-gradient(
             circle,
-            #bd5c46,
-            #4b1713
+            #7b3025,
+            #210b08
         );
 }
-
 
 .jupiter {
     background:
         radial-gradient(
             circle,
-            #c28c67,
-            #4b2d20
+            #79513b,
+            #21130c
         );
 }
-
 
 .saturn {
     background:
         radial-gradient(
             circle,
-            #d0ae78,
-            #514129
+            #8c724d,
+            #201a11
         );
 }
 
+
+/* TAG */
 
 .tag {
     color: #a78bfa;
@@ -510,6 +522,27 @@ form {
 }
 
 
+/* ПЛАНЕТА АТАУЫ */
+
+.planet-card h3 {
+    font-size: 24px;
+
+    margin:
+        8px 0;
+}
+
+
+/* СИПАТТАМА */
+
+.planet-card p {
+    color: #aeb7d0;
+
+    font-size: 15px;
+}
+
+
+/* ТОЛЫҚ АҚПАРАТ */
+
 .planet-card a {
     display: inline-block;
 
@@ -518,8 +551,16 @@ form {
     margin-top: 12px;
 
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
+.planet-card a:hover {
+    color: #ffffff;
+}
+
+
+/* НӘТИЖЕ ЖОҚ */
 
 .no-result {
     display: none;
@@ -531,6 +572,7 @@ form {
     margin-top: 30px;
 }
 
+/* ================= FORM ================= */
 
 form {
     max-width: 650px;
@@ -540,8 +582,15 @@ form {
     display: grid;
 
     gap: 16px;
-}
 
+    background: #10162d;
+
+    border: 1px solid #293252;
+
+    border-radius: 18px;
+
+    padding: 26px;
+}
 
 label {
     display: grid;
@@ -550,7 +599,6 @@ label {
 
     color: #cbd2e5;
 }
-
 
 input,
 textarea {
@@ -567,12 +615,10 @@ textarea {
     outline: none;
 }
 
-
 input:focus,
 textarea:focus {
     border-color: #8b5cf6;
 }
-
 
 textarea {
     min-height: 130px;
@@ -580,58 +626,13 @@ textarea {
     resize: vertical;
 }
 
-
 #formMessage {
     color: #a78bfa;
 
     font-weight: bold;
 }
 
-
-footer {
-    padding: 45px 8%;
-
-    border-top: 1px solid #252b4a;
-
-    display: flex;
-
-    gap: 50px;
-
-    flex-wrap: wrap;
-
-    color: #9da7c1;
-}
-
-
-footer b {
-    color: #c4b5fd;
-
-    font-size: 20px;
-}
-
-
-footer h4 {
-    color: white;
-
-    margin-bottom: 8px;
-}
-
-
-footer a {
-    display: block;
-
-    margin: 4px 0;
-}
-
-
-.copyright {
-    width: 100%;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #252b4a;
-}
-
+/* ================= DETAIL PAGE ================= */
 
 .detail-page {
     max-width: 1100px;
@@ -648,7 +649,6 @@ footer a {
 
     align-items: center;
 }
-
 
 .detail-planet {
     height: 400px;
@@ -671,18 +671,15 @@ footer a {
         rgba(81, 66, 155, 0.5);
 }
 
-
 #planetSymbol {
     font-size: 160px;
 }
-
 
 .detail-content h1 {
     font-size: 58px;
 
     margin: 10px 0 15px;
 }
-
 
 .detail-content p {
     color: #b8c0d9;
@@ -692,11 +689,9 @@ footer a {
     margin: 25px 0;
 }
 
-
 .detail-content h2 {
     margin-bottom: 10px;
 }
-
 
 .detail-content ul {
     margin-bottom: 30px;
@@ -706,6 +701,49 @@ footer a {
     color: #cbd2e5;
 }
 
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 45px 8%;
+
+    border-top: 1px solid #252b4a;
+
+    display: flex;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    color: #9da7c1;
+}
+
+footer b {
+    color: #c4b5fd;
+
+    font-size: 20px;
+}
+
+footer h4 {
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+footer a {
+    display: block;
+
+    margin: 4px 0;
+}
+
+.copyright {
+    width: 100%;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #252b4a;
+}
+
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
@@ -727,6 +765,7 @@ footer a {
 
 }
 
+/* ================= PHONE ================= */
 
 @media (max-width: 700px) {
 
@@ -734,13 +773,11 @@ footer a {
         padding: 0 5%;
     }
 
-
     .menu-btn {
         display: block;
 
         margin-left: auto;
     }
-
 
     nav {
         display: none;
@@ -762,16 +799,13 @@ footer a {
         text-align: center;
     }
 
-
     nav.open {
         display: flex;
     }
 
-
     .theme-btn {
         display: none;
     }
-
 
     .hero {
         flex-direction: column;
@@ -781,16 +815,13 @@ footer a {
         padding: 70px 6%;
     }
 
-
     .hero h1 {
         font-size: 43px;
     }
 
-
     .hero p {
         font-size: 16px;
     }
-
 
     .planet-animation {
         width: 230px;
@@ -800,27 +831,34 @@ footer a {
         font-size: 110px;
     }
 
-
     .section {
         padding: 60px 6%;
     }
 
-
     .section-title h2 {
         font-size: 32px;
     }
-
 
     .three,
     .four {
         grid-template-columns: 1fr;
     }
 
-
     .about-box {
         flex-direction: column;
     }
 
+    /* Телефонда да фото толық сыяды */
+
+    .planet-image {
+        height: 220px;
+    }
+
+    .planet-image img {
+        padding: 12px;
+
+        object-fit: contain;
+    }
 
     .detail-page {
         grid-template-columns: 1fr;
@@ -828,16 +866,13 @@ footer a {
         margin: 40px auto;
     }
 
-
     .detail-planet {
         height: 280px;
     }
 
-
     #planetSymbol {
         font-size: 120px;
     }
-
 
     .detail-content h1 {
         font-size: 42px;
